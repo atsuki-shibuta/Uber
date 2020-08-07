@@ -1,0 +1,3 @@
+class RequestAcceptController < ApplicationController
+
+end

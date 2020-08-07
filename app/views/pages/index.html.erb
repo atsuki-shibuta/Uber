@@ -1,0 +1,26 @@
+<% if driver_signed_in? %>
+  <div class="row">
+    <h1>仕事を探そう</h1>
+  </div>
+
+<% elsif user_signed_in? %>
+	<div class="row">
+    <h1>アッシーを探そう</h1>
+  </div>
+
+<% else %>
+	<div class="center jumbotron">
+	    <div class="text-center">
+	      <h1>Uber</h1>
+	      <h3>Let's drive !!</h3>
+	      <%= link_to 'ドライバーでログイン', new_driver_session_path %>
+	      <%= link_to 'ユーザーでログイン', new_user_session_path %>
+	      <h5>または</h5>
+	      <%= link_to 'ドライバーとして登録', 
+	      		new_driver_registration_path, class: 'btn btn-lg btn-primary'%>
+	      <%= link_to 'ユーザーとして登録', 
+	      		new_user_registration_path, class: 'btn btn-lg btn-primary'%>
+	    </div>
+  </div>
+<% end %>
+
